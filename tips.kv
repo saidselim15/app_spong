@@ -1,0 +1,1276 @@
+<TipsScreen>:
+
+    MDFloatLayout:
+        md_bg_color: 0, 0, 0, 0.8
+        MDToolbar:
+            text: 'Бизнес Книги'
+            pos_hint: {'center_y': .96}
+            size_hint_y: .121
+
+        MDIconButton:
+            icon: 'arrow-left-circle'
+            pos_hint: {'center_y': .96, 'center_x': .05}
+            theme_text_color: 'Custom'
+            text_color: [1, 1, 1, 1]
+            on_press:
+                root.manager.current = 'menu'
+                root.manager.transition.direction = 'right'
+
+
+        MDLabel:
+            text: 'Советы'
+            font_size: 30
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+            pos_hint: {'center_y': .96, 'center_x': .5}
+            bold: True
+            halign: 'center'
+
+
+        MDFillRoundFlatButton:
+            text: '20 Секретов Успешного Бизнеса'
+            text_color: 1, 1, 1, 1
+            line_color: 0, .6, 1, 1
+            md_bg_color: 0, .6, 1, 1
+            font_size: 20
+            pos_hint: {'center_y': .55, 'center_x': .5}
+            size_hint: .9, .082
+            bold: True
+            on_press:
+                root.manager.current = 'biznestip'
+                root.manager.transition.direction = 'left'
+
+
+
+        MDFillRoundFlatButton:
+            text: '20 Советов По Саморазвитию'
+            text_color: 1, 1, 1, 1
+            line_color: 0, .6, 1, 1
+            md_bg_color: 0, .6, 1, 1
+            font_size: 20
+            pos_hint: {'center_y': .45, 'center_x': .5}
+            size_hint: .9, .082
+            bold: True
+            on_press:
+                root.manager.current = 'sdevtip'
+                root.manager.transition.direction = 'left'
+
+
+
+<BiznetipScreen>
+    MDFloatLayout:
+        md_bg_color: 0, 0, 0, 0.8
+        MDToolbar:
+            text: ''
+            pos_hint: {'center_y': .96}
+            size_hint_y: .121
+
+        MDLabel:
+            text: 'Бизнес Советы'
+            font_size: 30
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+            pos_hint: {'center_y': .96, 'center_x': .5}
+            bold: True
+            halign: 'center'
+
+        MDIconButton:
+            icon: 'arrow-left-circle'
+            pos_hint: {'center_y': .96, 'center_x': .05}
+            theme_text_color: 'Custom'
+            text_color: [1, 1, 1, 1]
+            on_press:
+                root.manager.current = 'tips'
+                root.manager.transition.direction = 'right'
+
+        BoxLayout:
+            size_hint_y: .87
+            pos_hint: {'center_y':.46}
+            canvas.before:
+                Color:
+                    rgba: 0, 0, 0, 0.01
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+            ScrollView:
+                MDList:
+                    #1
+                    OneLineListItem:
+                        text: '1. Время не безграничный товар.'
+                        on_release:
+                            root.manager.current = 'btip1'
+                            root.manager.transition.direction = 'left'
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 1
+                    #2
+                    OneLineListItem:
+                        text: '2. Талант переоценен.'
+                        on_release:
+                            root.manager.current = 'btip2'
+                            root.manager.transition.direction = 'left'
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 1
+                    #3
+                    OneLineListItem:
+                        text: '3. Мы более продуктивны по утрам. '
+                        on_release:
+                            root.manager.current = 'btip3'
+                            root.manager.transition.direction = 'left'
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 1
+                    #4
+                    OneLineListItem:
+                        text: '4. Социальные медиа - это не карьера.'
+                        on_release:
+                            root.manager.current = 'btip4'
+                            root.manager.transition.direction = 'left'
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 1
+                    #5
+                    OneLineListItem:
+                        text: '5. Перестаньте прятаться за компьютером.'
+                        on_release:
+                            root.manager.current = 'btip5'
+                            root.manager.transition.direction = 'left'
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 1
+                    #6
+                    OneLineListItem:
+                        text: '6. Приезжайте первым и уезжайте последним.'
+                        on_release:
+                            root.manager.current = 'btip6'
+                            root.manager.transition.direction = 'left'
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 1
+                    #7
+                    OneLineListItem:
+                        text: '7. Не ждите разрешения прежде, чем что-то сделать.'
+                        on_release:
+                            root.manager.current = 'btip7'
+                            root.manager.transition.direction = 'left'
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 1
+                    #8
+                    OneLineListItem:
+                        text: '8. Возьмите на себя ответственность за свои ошибки.'
+                        on_release:
+                            root.manager.current = 'btip8'
+                            root.manager.transition.direction = 'left'
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 1
+                    #9
+                    OneLineListItem:
+                        text: '9. Хорошая возможность быстро учиться - работать рядом с суперпрофессионалом.'
+                        on_release:
+                            root.manager.current = 'btip9'
+                            root.manager.transition.direction = 'left'
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 1
+                    #10
+                    OneLineListItem:
+                        text: '10. Не стоит слишком часто менять работу.'
+                        on_release:
+                            root.manager.current = 'btip10'
+                            root.manager.transition.direction = 'left'
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 1
+                    #11
+                    OneLineListItem:
+                        text: '11. Не ведитесь на соцпакет. '
+                        on_release:
+                            root.manager.current = 'btip11'
+                            root.manager.transition.direction = 'left'
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 1
+                    #12
+                    OneLineListItem:
+                        text: '12. Нужно прикладывать усилия.'
+                        on_release:
+                            root.manager.current = 'btip12'
+                            root.manager.transition.direction = 'left'
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 1
+                    #13
+                    OneLineListItem:
+                        text: '13. Говорите меньше. '
+                        on_release:
+                            root.manager.current = 'btip13'
+                            root.manager.transition.direction = 'left'
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 1
+                    #14
+                    OneLineListItem:
+                        text: '14. Осваивайте новые технологии. '
+                        on_release:
+                            root.manager.current = 'btip14'
+                            root.manager.transition.direction = 'left'
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 1
+                    #15
+                    OneLineListItem:
+                        text: '15. Социальные связи.'
+                        on_release:
+                            root.manager.current = 'btip15'
+                            root.manager.transition.direction = 'left'
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 1
+                    #16
+                    OneLineListItem:
+                        text: '16. Вам потребуется как минимум три профессиональных наставника.'
+                        on_release:
+                            root.manager.current = 'btip16'
+                            root.manager.transition.direction = 'left'
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 1
+                    #17
+                    OneLineListItem:
+                        text: '17. Чтобы чему-то научиться, нужно постоянно притворяться, будто уже достиг всего.'
+                        on_release:
+                            root.manager.current = 'btip17'
+                            root.manager.transition.direction = 'left'
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 1
+                    #18
+                    OneLineListItem:
+                        text: '18. Меньше твитов - больше книг.'
+                        on_release:
+                            root.manager.current = 'btip18'
+                            root.manager.transition.direction = 'left'
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 1
+                    #19
+                    OneLineListItem:
+                        text: '19. Научитесь экономить.'
+                        on_release:
+                            root.manager.current = 'btip19'
+                            root.manager.transition.direction = 'left'
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 1
+                    #20
+                    OneLineListItem:
+                        text: '20. Репутация бесценна.'
+                        on_release:
+                            root.manager.current = 'btip20'
+                            root.manager.transition.direction = 'left'
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 1
+
+<Biznetip1Screen>
+    MDFloatLayout:
+        md_bg_color: 0, 0, 0, 0.8
+        MDIconButton:
+            icon: 'arrow-left-circle'
+            pos_hint: {'center_y': .96, 'center_x': .05}
+            theme_text_color: 'Custom'
+            text_color: [1, 1, 1, 1]
+            on_press:
+                root.manager.current = 'biznestip'
+                root.manager.transition.direction = 'right'
+
+        MDLabel:
+            text: '[b][size=24]1. Время не безграничный товар.[/size][/b] \n \n В мире крайне мало 20-летних ребят с "повышенным чувстом срочности". Им кажется, что вся их жизнь и все их по-настоящему крупные успехи еще впереди, а потому пока можно просто походить на конференции стартаперов, поговорить о своих мечтах с друзьями в кафе и т.д. Но время - единственный ресурс, который есть в изобилии у молодежи, и которым явно не стоит разбрасываться, потому что больше его уже никогда не станет. Если вам 20, помните: те возможности, которые есть у вас сегодня, могут не появиться у вас завтра. Поэтому действовать надо незамедлительно.'
+            font_size: 20
+            halign: 'left'
+            padding_x: 10
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+            pos_hint: {'center_x': .5, 'center_y': .5}
+            markup: True
+<Biznetip2Screen>
+    MDFloatLayout:
+        md_bg_color: 0, 0, 0, 0.8
+        MDIconButton:
+            icon: 'arrow-left-circle'
+            pos_hint: {'center_y': .96, 'center_x': .05}
+            theme_text_color: 'Custom'
+            text_color: [1, 1, 1, 1]
+            on_press:
+                root.manager.current = 'biznestip'
+                root.manager.transition.direction = 'right'
+
+        MDLabel:
+            text: '[b][size=24]2. Талант переоценен.[/size][/b] \n \n Каждый, кто начинает свой собственный бизнес сразу после обретения совершеннолетия, страшно горд собой. Он знает, что талантлив. Но талант - это "неочищенное сырье", которое само по себе ничего не стоит. Крайне важно вовремя начать его "переработку", то есть методично и целенаправленно работать на пути к успеху. Идея о том, что вы самый умный, и будете оставаться таковым всегда, нежизнеспособна.'
+            font_size: 20
+            halign: 'left'
+            padding_x: 10
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+            pos_hint: {'center_x': .5, 'center_y': .5}
+            markup: True
+<Biznetip3Screen>
+    MDFloatLayout:
+        md_bg_color: 0, 0, 0, 0.8
+        MDIconButton:
+            icon: 'arrow-left-circle'
+            pos_hint: {'center_y': .96, 'center_x': .05}
+            theme_text_color: 'Custom'
+            text_color: [1, 1, 1, 1]
+            on_press:
+                root.manager.current = 'biznestip'
+                root.manager.transition.direction = 'right'
+
+        MDLabel:
+            text: '[b][size=24]3. Мы более продуктивны по утрам.[/size][/b] \n \n По утрам мозг работает лучше, чем ночью, и успеть получится больше. Гораздо лучше интенсивно работать над продуктом по утрам, а вторую половину дня тратить на встречи, телефонные звонки и стратегическое планирование. Кстати, этот тезис подтвержден научно.'
+            font_size: 20
+            halign: 'left'
+            padding_x: 10
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+            pos_hint: {'center_x': .5, 'center_y': .5}
+            markup: True
+<Biznetip4Screen>
+    MDFloatLayout:
+        md_bg_color: 0, 0, 0, 0.8
+        MDIconButton:
+            icon: 'arrow-left-circle'
+            pos_hint: {'center_y': .96, 'center_x': .05}
+            theme_text_color: 'Custom'
+            text_color: [1, 1, 1, 1]
+            on_press:
+                root.manager.current = 'biznestip'
+                root.manager.transition.direction = 'right'
+
+        MDLabel:
+            text: '[b][size=24]4. Социальные медиа - это не карьера.[/size][/b] \n \n Этой должности не будет даже в крупных компаниях уже через пять лет. SMM - это просто одна составляющая часть маркетинга. Не более чем. Построить карьеру на своем желании сутками сидеть в Facebook у вас точно не получится.'
+            font_size: 20
+            halign: 'left'
+            padding_x: 10
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+            pos_hint: {'center_x': .5, 'center_y': .5}
+            markup: True
+<Biznetip5Screen>
+    MDFloatLayout:
+        md_bg_color: 0, 0, 0, 0.8
+        MDIconButton:
+            icon: 'arrow-left-circle'
+            pos_hint: {'center_y': .96, 'center_x': .05}
+            theme_text_color: 'Custom'
+            text_color: [1, 1, 1, 1]
+            on_press:
+                root.manager.current = 'biznestip'
+                root.manager.transition.direction = 'right'
+
+        MDLabel:
+            text: '[b][size=24]5. Перестаньте прятаться за компьютером.[/size][/b] \n \n Успех в бизнесе напрямую связан с личными контактами и "эмоциональными" разговорами. Хотите построить успешный бизнес? Чаще берите в руки телефон. Но не для того, чтобы ответить другу в чате, а чтобы позвонить клиенту.'
+            font_size: 20
+            halign: 'left'
+            padding_x: 10
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+            pos_hint: {'center_x': .5, 'center_y': .5}
+            markup: True
+<Biznetip6Screen>
+    MDFloatLayout:
+        md_bg_color: 0, 0, 0, 0.8
+        MDIconButton:
+            icon: 'arrow-left-circle'
+            pos_hint: {'center_y': .96, 'center_x': .05}
+            theme_text_color: 'Custom'
+            text_color: [1, 1, 1, 1]
+            on_press:
+                root.manager.current = 'biznestip'
+                root.manager.transition.direction = 'right'
+
+        MDLabel:
+            text: '[b][size=24]6. Приезжайте первым и уезжайте последним.[/size][/b] \n \n Единственный способ обойти конкурентов и стать лидером рынка - работать больше конкурентов. Плюс ко всему, ваши сотрудники вряд ли будут хорошо работать, если с боссом они на "ты", а в офисе он не появляется раньше обеда.'
+            font_size: 20
+            halign: 'left'
+            padding_x: 10
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+            pos_hint: {'center_x': .5, 'center_y': .5}
+            markup: True
+<Biznetip7Screen>
+    MDFloatLayout:
+        md_bg_color: 0, 0, 0, 0.8
+        MDIconButton:
+            icon: 'arrow-left-circle'
+            pos_hint: {'center_y': .96, 'center_x': .05}
+            theme_text_color: 'Custom'
+            text_color: [1, 1, 1, 1]
+            on_press:
+                root.manager.current = 'biznestip'
+                root.manager.transition.direction = 'right'
+
+        MDLabel:
+            text: '[b][size=24]7. Не ждите разрешения прежде, чем что-то сделать.[/size][/b] \n \n Перед началом важного дела не стоит также искать поддержки у близких. Решил - сделал. Никто не укажет вам путь к миллионам. Найти его придется самостоятельно.'
+            font_size: 20
+            halign: 'left'
+            padding_x: 10
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+            pos_hint: {'center_x': .5, 'center_y': .5}
+            markup: True
+<Biznetip8Screen>
+    MDFloatLayout:
+        md_bg_color: 0, 0, 0, 0.8
+        MDIconButton:
+            icon: 'arrow-left-circle'
+            pos_hint: {'center_y': .96, 'center_x': .05}
+            theme_text_color: 'Custom'
+            text_color: [1, 1, 1, 1]
+            on_press:
+                root.manager.current = 'biznestip'
+                root.manager.transition.direction = 'right'
+
+        MDLabel:
+            text: '[b][size=24]8. Возьмите на себя ответственность за свои ошибки.[/size][/b] \n \n Чтобы быть успешным, нужно совершить множество ошибок, но при этом всегда находить в себе силы попробовать что-то еще. Но это не значит, что вы должны защищать свои ошибки или искать им оправдания. Честность перед самим собой - едва ли не главное свойство успешного бизнесмена.'
+            font_size: 20
+            halign: 'left'
+            padding_x: 10
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+            pos_hint: {'center_x': .5, 'center_y': .5}
+            markup: True
+<Biznetip9Screen>
+    MDFloatLayout:
+        md_bg_color: 0, 0, 0, 0.8
+        MDIconButton:
+            icon: 'arrow-left-circle'
+            pos_hint: {'center_y': .96, 'center_x': .05}
+            theme_text_color: 'Custom'
+            text_color: [1, 1, 1, 1]
+            on_press:
+                root.manager.current = 'biznestip'
+                root.manager.transition.direction = 'right'
+
+        MDLabel:
+            text: '[b][size=24]9. Хорошая возможность быстро учиться - работать рядом с суперпрофессионалом.[/size][/b] \n \n Как в фильме "Дьявол носит Prada". Работа личным секретарем лидера отрасли - хороший старт для успешной карьеры и не менее хорошее подспорье для собственного бизнеса в будущем. Нужно постоянно совершенствовать и расширять свои пределы каждый день.'
+            font_size: 20
+            halign: 'left'
+            padding_x: 10
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+            pos_hint: {'center_x': .5, 'center_y': .5}
+            markup: True
+<Biznetip10Screen>
+    MDFloatLayout:
+        md_bg_color: 0, 0, 0, 0.8
+        MDIconButton:
+            icon: 'arrow-left-circle'
+            pos_hint: {'center_y': .96, 'center_x': .05}
+            theme_text_color: 'Custom'
+            text_color: [1, 1, 1, 1]
+            on_press:
+                root.manager.current = 'biznestip'
+                root.manager.transition.direction = 'right'
+
+        MDLabel:
+            text: '[b][size=24]10. Не стоит слишком часто менять работу.[/size][/b] \n \n Люди, который раз в год меняют место работы, мало кому нравятся. И вполне заслуженно: чтобы освоить какие-то новые навыки и получить новые знания (иначе зачем вы ходите на работу?!), нужно не менее чем два-три года упорного труда. Если вы "перебежчик" со стажем, вряд ли вы всерьез научились хоть чему-то.'
+            font_size: 20
+            halign: 'left'
+            padding_x: 10
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+            pos_hint: {'center_x': .5, 'center_y': .5}
+            markup: True
+<Biznetip11Screen>
+    MDFloatLayout:
+        md_bg_color: 0, 0, 0, 0.8
+        MDIconButton:
+            icon: 'arrow-left-circle'
+            pos_hint: {'center_y': .96, 'center_x': .05}
+            theme_text_color: 'Custom'
+            text_color: [1, 1, 1, 1]
+            on_press:
+                root.manager.current = 'biznestip'
+                root.manager.transition.direction = 'right'
+
+        MDLabel:
+            text: '[b][size=24]11. Не ведитесь на соцпакет.[/size][/b] \n \n Конечно, это так заманчиво - поработать в офисе, где бесплатно раздают печеньки, делают массаж и без ограничений пускают в игровую комнату. Но куда полезнее для карьеры выбрать ту фирму, где вам удастся поработать с опытными менеджерами и инженерами. Великий наставник важнее бесплатных печенек.'
+            font_size: 20
+            halign: 'left'
+            padding_x: 10
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+            pos_hint: {'center_x': .5, 'center_y': .5}
+            markup: True
+<Biznetip12Screen>
+    MDFloatLayout:
+        md_bg_color: 0, 0, 0, 0.8
+        MDIconButton:
+            icon: 'arrow-left-circle'
+            pos_hint: {'center_y': .96, 'center_x': .05}
+            theme_text_color: 'Custom'
+            text_color: [1, 1, 1, 1]
+            on_press:
+                root.manager.current = 'biznestip'
+                root.manager.transition.direction = 'right'
+
+        MDLabel:
+            text: '[b][size=24]12. Нужно прикладывать усилия.[/size][/b] \n \n Когда занят чем-то на работе сегодня, нужно всегда знать, какой результат для личной карьеры это даст в будущем. Порой действительно трудно делать то, что не хочется. Но если в этом есть смысл - это придется сделать. Если же работа бессмысленна, а карьерного роста и смены деятельности не намечается, пора искать новое место работы.'
+            font_size: 20
+            halign: 'left'
+            padding_x: 10
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+            pos_hint: {'center_x': .5, 'center_y': .5}
+            markup: True
+<Biznetip13Screen>
+    MDFloatLayout:
+        md_bg_color: 0, 0, 0, 0.8
+        MDIconButton:
+            icon: 'arrow-left-circle'
+            pos_hint: {'center_y': .96, 'center_x': .05}
+            theme_text_color: 'Custom'
+            text_color: [1, 1, 1, 1]
+            on_press:
+                root.manager.current = 'biznestip'
+                root.manager.transition.direction = 'right'
+
+        MDLabel:
+            text: '[b][size=24]13. Говорите меньше.[/size][/b] \n \n Новое поколение Y - это поколение болтунов. Когда люди болтают на рабочем месте, для компании это как рак. Жалобы и трэш-разговоры способны уничтожить любую компанию и загубить любую карьеру.'
+            font_size: 20
+            halign: 'left'
+            padding_x: 10
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+            pos_hint: {'center_x': .5, 'center_y': .5}
+            markup: True
+<Biznetip14Screen>
+    MDFloatLayout:
+        md_bg_color: 0, 0, 0, 0.8
+        MDIconButton:
+            icon: 'arrow-left-circle'
+            pos_hint: {'center_y': .96, 'center_x': .05}
+            theme_text_color: 'Custom'
+            text_color: [1, 1, 1, 1]
+            on_press:
+                root.manager.current = 'biznestip'
+                root.manager.transition.direction = 'right'
+
+        MDLabel:
+            text: '[b][size=24]14. Осваивайте новые технологии.[/size][/b] \n \n Строчка "опытный пользователь Microsoft Office" не добавит вашему резюме ничего. А вот знание Photoshop, MySQL, WordPress, Adwords, Balsamiq или Final Cut Pro - это куда важнее. В современном мире знать самые "продвинутые" программные продукты - обязательное условие развития.'
+            font_size: 20
+            halign: 'left'
+            padding_x: 10
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+            pos_hint: {'center_x': .5, 'center_y': .5}
+            markup: True
+<Biznetip15Screen>
+    MDFloatLayout:
+        md_bg_color: 0, 0, 0, 0.8
+        MDIconButton:
+            icon: 'arrow-left-circle'
+            pos_hint: {'center_y': .96, 'center_x': .05}
+            theme_text_color: 'Custom'
+            text_color: [1, 1, 1, 1]
+            on_press:
+                root.manager.current = 'biznestip'
+                root.manager.transition.direction = 'right'
+
+        MDLabel:
+            text: '[b][size=24]15. Социальные связи.[/size][/b] \n \n Нужно стремиться к тому, чтобы поддерживать связь как можно с большим количеством людей. Инвестировать в отношения нужно все свое свободное время.'
+            font_size: 20
+            halign: 'left'
+            padding_x: 10
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+            pos_hint: {'center_x': .5, 'center_y': .5}
+            markup: True
+<Biznetip16Screen>
+    MDFloatLayout:
+        md_bg_color: 0, 0, 0, 0.8
+        MDIconButton:
+            icon: 'arrow-left-circle'
+            pos_hint: {'center_y': .96, 'center_x': .05}
+            theme_text_color: 'Custom'
+            text_color: [1, 1, 1, 1]
+            on_press:
+                root.manager.current = 'biznestip'
+                root.manager.transition.direction = 'right'
+
+        MDLabel:
+            text: '[b][size=24]16. Вам потребуется как минимум три профессиональных наставника.[/size][/b] \n \n Речь идет о людях, которые уже достигли того, к чему стремитесь вы. Их советы и внимание, которые вы можете получить, позже окажутся бесценными.'
+            font_size: 20
+            halign: 'left'
+            padding_x: 10
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+            pos_hint: {'center_x': .5, 'center_y': .5}
+            markup: True
+<Biznetip17Screen>
+    MDFloatLayout:
+        md_bg_color: 0, 0, 0, 0.8
+        MDIconButton:
+            icon: 'arrow-left-circle'
+            pos_hint: {'center_y': .96, 'center_x': .05}
+            theme_text_color: 'Custom'
+            text_color: [1, 1, 1, 1]
+            on_press:
+                root.manager.current = 'biznestip'
+                root.manager.transition.direction = 'right'
+
+        MDLabel:
+            text: '[b][size=24]17. Чтобы чему-то научиться, нужно постоянно притворяться, будто уже достиг всего.[/size][/b] \n \n Ваш босс принимает тяжелое решение? А как бы поступили вы, будь вы на его месте? Такое моделирование так или иначе подготовит вас к тяжелым испытаниям будущего.'
+            font_size: 20
+            halign: 'left'
+            padding_x: 10
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+            pos_hint: {'center_x': .5, 'center_y': .5}
+            markup: True
+<Biznetip18Screen>
+    MDFloatLayout:
+        md_bg_color: 0, 0, 0, 0.8
+        MDIconButton:
+            icon: 'arrow-left-circle'
+            pos_hint: {'center_y': .96, 'center_x': .05}
+            theme_text_color: 'Custom'
+            text_color: [1, 1, 1, 1]
+            on_press:
+                root.manager.current = 'biznestip'
+                root.manager.transition.direction = 'right'
+
+        MDLabel:
+            text: '[b][size=24]18. Меньше твитов - больше книг.[/size][/b] \n \n Читайте. Как можно более сложные и длинные тексты. В сообщениях длиной в 140 символов нет ни смысла, ни глубины. Убедитесь, что прочитываете хотя бы одну книгу в месяц.'
+            font_size: 20
+            halign: 'left'
+            padding_x: 10
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+            pos_hint: {'center_x': .5, 'center_y': .5}
+            markup: True
+<Biznetip19Screen>
+    MDFloatLayout:
+        md_bg_color: 0, 0, 0, 0.8
+        MDIconButton:
+            icon: 'arrow-left-circle'
+            pos_hint: {'center_y': .96, 'center_x': .05}
+            theme_text_color: 'Custom'
+            text_color: [1, 1, 1, 1]
+            on_press:
+                root.manager.current = 'biznestip'
+                root.manager.transition.direction = 'right'
+
+        MDLabel:
+            text: '[b][size=24]19. Научитесь экономить.[/size][/b] \n \n Золотые наручные часы, модный автомобиль и квартира в престижном районе сделают вас заложником материального достатка. Чем меньше вы будете тратить в повседневной жизни, тем легче вам будет справиться с финансовыми неурядицами в будущем - после того, как вы станет автором еще одного стартапа. Мелочиться и расстраиваться по поводу каждого потраченного рубля, конечно, глупо, но снизить расходы на 25% способен каждый. Начните с малого.'
+            font_size: 20
+            halign: 'left'
+            padding_x: 10
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+            pos_hint: {'center_x': .5, 'center_y': .5}
+            markup: True
+<Biznetip20Screen>
+    MDFloatLayout:
+        md_bg_color: 0, 0, 0, 0.8
+        MDIconButton:
+            icon: 'arrow-left-circle'
+            pos_hint: {'center_y': .96, 'center_x': .05}
+            theme_text_color: 'Custom'
+            text_color: [1, 1, 1, 1]
+            on_press:
+                root.manager.current = 'biznestip'
+                root.manager.transition.direction = 'right'
+
+        MDLabel:
+            text: '[b][size=24]20. Репутация бесценна.[/size][/b] \n \n Ее нельзя терять, поскольку это самая ценная валюта, что у вас есть. Хорошая репутация - залог стабильного и хорошего бизнеса, ее отсутствие - практически гарантия провала. И это особенно важно в мире, где все все про всех знают. Следите за тем, что публикуете в социальных сетях. Репутация - то сокровище, которое невозможно найти после того, как потеряешь.'
+            font_size: 20
+            halign: 'left'
+            padding_x: 10
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+            pos_hint: {'center_x': .5, 'center_y': .5}
+            markup: True
+
+<SdevtipsScreen>
+    MDFloatLayout:
+        md_bg_color: 0, 0, 0, 0.8
+        MDToolbar:
+            text: ''
+            pos_hint: {'center_y': .96}
+            size_hint_y: .121
+
+        MDLabel:
+            text: 'Саморазвитие'
+            font_size: 30
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+            pos_hint: {'center_y': .96, 'center_x': .5}
+            bold: True
+            halign: 'center'
+
+        MDIconButton:
+            icon: 'arrow-left-circle'
+            pos_hint: {'center_y': .96, 'center_x': .05}
+            theme_text_color: 'Custom'
+            text_color: [1, 1, 1, 1]
+            on_press:
+                root.manager.current = 'tips'
+                root.manager.transition.direction = 'right'
+
+        BoxLayout:
+            size_hint_y: .87
+            pos_hint: {'center_y':.46}
+            canvas.before:
+                Color:
+                    rgba: 0, 0, 0, 0.01
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+            ScrollView:
+                MDList:
+                    OneLineListItem:
+                        text:'Границы в нашей голове'
+                        on_release:
+                            root.manager.current = 'sdtip1'
+                            root.manager.transition.direction = 'left'
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 1
+                        #2
+                    OneLineListItem:
+                        text: 'Как повысить качество работы?'
+                        on_release:
+                            root.manager.current = 'sdtip2'
+                            root.manager.transition.direction = 'left'
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 1
+                        #3
+                    OneLineListItem:
+                        text: 'Метод самовнушения: Визуализация.'
+                        on_release:
+                            root.manager.current = 'sdtip3'
+                            root.manager.transition.direction = 'left'
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 1
+                        #4
+                    OneLineListItem:
+                        text: 'Две мощные установки:'
+                        on_release:
+                            root.manager.current = 'sdtip4'
+                            root.manager.transition.direction = 'left'
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 1
+                        #5
+                    OneLineListItem:
+                        text: 'Как научиться владеть собой?'
+                        on_release:
+                            root.manager.current = 'sdtip5'
+                            root.manager.transition.direction = 'left'
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 1
+                        #6
+                    OneLineListItem:
+                        text: 'Измени свою жизнь к лучшему'
+                        on_release:
+                            root.manager.current = 'sdtip6'
+                            root.manager.transition.direction = 'left'
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 1
+                        #7
+                    OneLineListItem:
+                        text: 'Как понять, что пора меняться?'
+                        on_release:
+                            root.manager.current = 'sdtip7'
+                            root.manager.transition.direction = 'left'
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 1
+                        #8
+                    OneLineListItem:
+                        text: 'Помни, что никогда не поздно'
+                        on_release:
+                            root.manager.current = 'sdtip8'
+                            root.manager.transition.direction = 'left'
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 1
+                        #9
+                    OneLineListItem:
+                        text: 'Секреты успешных людей'
+                        on_release:
+                            root.manager.current = 'sdtip9'
+                            root.manager.transition.direction = 'left'
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 1
+                        #10
+                    OneLineListItem:
+                        text: 'Как правильно применять аффирмации?'
+                        on_release:
+                            root.manager.current = 'sdtip10'
+                            root.manager.transition.direction = 'left'
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 1
+                        #11
+                    OneLineListItem:
+                        text: 'Как сделать много и не уставать?'
+                        on_release:
+                            root.manager.current = 'sdtip11'
+                            root.manager.transition.direction = 'left'
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 1
+                        #12
+                    OneLineListItem:
+                        text: 'Как правильно копить деньги?'
+                        on_release:
+                            root.manager.current = 'sdtip12'
+                            root.manager.transition.direction = 'left'
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 1
+                        #13
+                    OneLineListItem:
+                        text: 'Как найти силы двигаться дальше?'
+                        on_release:
+                            root.manager.current = 'sdtip13'
+                            root.manager.transition.direction = 'left'
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 1
+                        #14
+                    OneLineListItem:
+                        text: ' Как развить в себе харизму?'
+                        on_release:
+                            root.manager.current = 'sdtip14'
+                            root.manager.transition.direction = 'left'
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 1
+                        #15
+                    OneLineListItem:
+                        text: 'Как начать день продуктивно?'
+                        on_release:
+                            root.manager.current = 'sdtip15'
+                            root.manager.transition.direction = 'left'
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 1
+                        #16
+                    OneLineListItem:
+                        text: 'Как эффективно достигать целей?'
+                        on_release:
+                            root.manager.current = 'sdtip16'
+                            root.manager.transition.direction = 'left'
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 1
+                        #17
+                    OneLineListItem:
+                        text: 'Как развить дисциплину в себе?'
+                        on_release:
+                            root.manager.current = 'sdtip17'
+                            root.manager.transition.direction = 'left'
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 1
+                        #18
+                    OneLineListItem:
+                        text: 'Раскройте свой потенциал'
+                        on_release:
+                            root.manager.current = 'sdtip18'
+                            root.manager.transition.direction = 'left'
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 1
+                        #19
+                    OneLineListItem:
+                        text: 'Как снова обрести мотивацию?'
+                        on_release:
+                            root.manager.current = 'sdtip19'
+                            root.manager.transition.direction = 'left'
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 1
+                        #20
+                    OneLineListItem:
+                        text: '6 полезных привычек на каждый день'
+                        on_release:
+                            root.manager.current = 'sdtip20'
+                            root.manager.transition.direction = 'left'
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 1
+
+<Sdevtips1Screen>
+    MDFloatLayout:
+        md_bg_color: 0, 0, 0, 0.8
+        MDIconButton:
+            icon: 'arrow-left-circle'
+            pos_hint: {'center_y': .96, 'center_x': .05}
+            theme_text_color: 'Custom'
+            text_color: [1, 1, 1, 1]
+            on_press:
+                root.manager.current = 'sdevtip'
+                root.manager.transition.direction = 'right'
+
+        MDLabel:
+            text: '[b][size=24]Границы в нашей голове[/size][/b] \n \nОпределите, какие страхи сковывают ваши действия. Чтобы расширить пределы своих возможностей, нужно сначала осознать, с чем имеешь дело, что пугает вас, что вы боитесь признавать. \n \nУспех приходит тогда, когда вы смотрите своим страхам прямо в лицо и признаете свои слабости. Нужно признать тот факт, что бояться — это нормально и честно исследовать свой страх.'
+            font_size: 20
+            halign: 'left'
+            padding_x: 10
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+            pos_hint: {'center_x': .5, 'center_y': .5}
+            markup: True
+<Sdevtips2Screen>
+    MDFloatLayout:
+        md_bg_color: 0, 0, 0, 0.8
+        MDIconButton:
+            icon: 'arrow-left-circle'
+            pos_hint: {'center_y': .96, 'center_x': .05}
+            theme_text_color: 'Custom'
+            text_color: [1, 1, 1, 1]
+            on_press:
+                root.manager.current = 'sdevtip'
+                root.manager.transition.direction = 'right'
+
+        MDLabel:
+            text: '[b][size=24]Как повысить качество работы?[/size][/b] \n \nСоздать правильное рабочее окружение: Где бы вы ни работали — в офисе или дома — необходимо создать такое окружение, которое моментально будет настраивать на рабочий лад. Это место должно: Вдохновлять. Быть чистым и опрятным. Создавать правильное настроение. \n \nНаучиться делать перерывы в правильное время: Каждые два-три часа делайте перерыв на 10-15 минут, чтобы полежать с закрытыми глазами, медитировать или хотя бы переключить внимание на что-то спокойное и зарядиться энергией. Не брезгуйте этим советом.'
+            font_size: 20
+            halign: 'left'
+            padding_x: 10
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+            pos_hint: {'center_x': .5, 'center_y': .5}
+            markup: True
+<Sdevtips3Screen>
+    MDFloatLayout:
+        md_bg_color: 0, 0, 0, 0.8
+        MDIconButton:
+            icon: 'arrow-left-circle'
+            pos_hint: {'center_y': .96, 'center_x': .05}
+            theme_text_color: 'Custom'
+            text_color: [1, 1, 1, 1]
+            on_press:
+                root.manager.current = 'sdevtip'
+                root.manager.transition.direction = 'right'
+
+        MDLabel:
+            text: '[b][size=24]Метод самовнушения: Визуализация.[/size][/b] \n \n Визуализацией называют мысленное переживание и представление неких воображаемых событий. Самовнушение – это то, что помогает нам визуализировать. Почему метод так эффективен? Все просто: наш мозг не различает реальные события от придуманных, воображаемых. \n \nКак это действует? Вы начинаете создавать в воображении мысленные картинки – мозг полагает, что это действительность. Цель визуализации: представление желаемых событий. Попросту говоря, силой мысли вы переносите себя в желаемую ситуацию, и находитесь в ней. Важно все представлять как бы изнутри, а не со стороны.'
+            font_size: 18
+            halign: 'left'
+            padding_x: 10
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+            pos_hint: {'center_x': .5, 'center_y': .5}
+            markup: True
+<Sdevtips4Screen>
+    MDFloatLayout:
+        md_bg_color: 0, 0, 0, 0.8
+        MDIconButton:
+            icon: 'arrow-left-circle'
+            pos_hint: {'center_y': .96, 'center_x': .05}
+            theme_text_color: 'Custom'
+            text_color: [1, 1, 1, 1]
+            on_press:
+                root.manager.current = 'sdevtip'
+                root.manager.transition.direction = 'right'
+
+        MDLabel:
+            text: '[b][size=24]Две мощные установки:[/size][/b] \n \nЯ великий.\nВера в то, что ты великий, — это одно из самых сильных внутренних убеждений. Сейчас вы можете не думать о себе как о великом человеке, но постоянное повторение этой аффирмации однажды заставит вас поверить в это. \n \nУ меня здоровое тело, блестящий ум, спокойный дух.\nЗдоровое тело начинается со здорового духа и ума. Если на душе кошки скребут, то этот негатив будет пагубно влиять и на ум, и на тело. То есть, если один элемент из этих трёх повреждён, весь механизм уже не будет работать исправно.'
+            font_size: 20
+            halign: 'left'
+            padding_x: 10
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+            pos_hint: {'center_x': .5, 'center_y': .5}
+            markup: True
+<Sdevtips5Screen>
+    MDFloatLayout:
+        md_bg_color: 0, 0, 0, 0.8
+        MDIconButton:
+            icon: 'arrow-left-circle'
+            pos_hint: {'center_y': .96, 'center_x': .05}
+            theme_text_color: 'Custom'
+            text_color: [1, 1, 1, 1]
+            on_press:
+                root.manager.current = 'sdevtip'
+                root.manager.transition.direction = 'right'
+
+        MDLabel:
+            text: '[b][size=24]Как научиться владеть собой?[/size][/b] \n \nЦели: Развитие умения владеть собой начинается с постановки целей. Подумайте о людях, которые обладают высокой самодисциплиной. Есть огромная вероятность того, что они четко осознают свои достоинства, имеют правильные цели и все действия направляют на их достижение. \n \nСила воли: Сила воли чрезвычайно важна для умения владеть собой, потому что толкает нас вперед и побуждает действовать даже в ситуации, когда мы напуганы или расстроены. Как только ее применение станет привычкой, вы сможете браться за самые сложные задания и не испытывать никаких эмоциональных трудностей.'
+            font_size: 20
+            halign: 'left'
+            padding_x: 10
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+            pos_hint: {'center_x': .5, 'center_y': .5}
+            markup: True
+<Sdevtips6Screen>
+    MDFloatLayout:
+        md_bg_color: 0, 0, 0, 0.8
+        MDIconButton:
+            icon: 'arrow-left-circle'
+            pos_hint: {'center_y': .96, 'center_x': .05}
+            theme_text_color: 'Custom'
+            text_color: [1, 1, 1, 1]
+            on_press:
+                root.manager.current = 'sdevtip'
+                root.manager.transition.direction = 'right'
+
+        MDLabel:
+            text: '[b][size=22]Измени свою жизнь к лучшему[/size][/b] \n \n Положительные изменения в одной жизненной сфере, даже совсем небольшие, дают мощный толчок. Главное — использовать полученную мотивацию, чтобы день за днём менять и другие сферы жизни. \n \nНапример, каждый день спрашивайте себя: «Улучшил ли я хотя бы на 1% своё физическое, эмоциональное, психологическое и душевное здоровье?» \n \nЧем лучше вы становитесь, тем больше хотите совершенствоваться дальше. Чем больше учитесь, тем больше понимаете, что вам ещё многое нужно узнать. Осознание, что сегодня вы стали лучше, чем были вчера, окрыляет. Только представьте, чего вы сможете добиться завтра!'
+            font_size: 18
+            halign: 'left'
+            padding_x: 10
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+            pos_hint: {'center_x': .5, 'center_y': .5}
+            markup: True
+<Sdevtips7Screen>
+    MDFloatLayout:
+        md_bg_color: 0, 0, 0, 0.8
+        MDIconButton:
+            icon: 'arrow-left-circle'
+            pos_hint: {'center_y': .96, 'center_x': .05}
+            theme_text_color: 'Custom'
+            text_color: [1, 1, 1, 1]
+            on_press:
+                root.manager.current = 'sdevtip'
+                root.manager.transition.direction = 'right'
+
+        MDLabel:
+            text: '[b][size=22]Как понять, что пора меняться?[/size][/b] \n \nОтсутсвие положительных эмоций: Если по утрам ты еле находишь в себе силы для того, чтобы проснуться и встать с кровати, а ко всему этому добавляются чувство разбитости и апатия — изменениям в жизни быть. Человек, у которого в жизни всё на самом деле хорошо, при пробуждении будет чувствовать положительные эмоции — благодарность, радость новому дню, предвкушение чего-то интересного. \n \n Ты боишься своего будущего: Если в твоей жизни не всё идет так, как надо, ты будешь чувствовать тревогу всякий раз, когда решишь задуматься о своем будущем. При этом ты можешь даже не осознавать в полной мере тот факт, что тебе нужны изменения.'
+            font_size: 18
+            halign: 'left'
+            padding_x: 10
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+            pos_hint: {'center_x': .5, 'center_y': .5}
+            markup: True
+<Sdevtips8Screen>
+    MDFloatLayout:
+        md_bg_color: 0, 0, 0, 0.8
+        MDIconButton:
+            icon: 'arrow-left-circle'
+            pos_hint: {'center_y': .96, 'center_x': .05}
+            theme_text_color: 'Custom'
+            text_color: [1, 1, 1, 1]
+            on_press:
+                root.manager.current = 'sdevtip'
+                root.manager.transition.direction = 'right'
+
+        MDLabel:
+            text: '[b][size=24]Помни, что никогда не поздно[/size][/b] \n \nМы — то, во что мы верим. Сколько великих открытий было совершено в зрелом возрасте. Сколько прекрасных историй любви случилось именно тогда, когда в паспорте было уже «сильно за…». \n \nКогда нам кажется, что мы чего-то не можем, — нам только кажется. Внутри нас живет тот, кто все может. В этом секрет успеха. Поздно или рано — очередное убеждение, созданное, чтобы убаюкивать наши лень и страх. Именно поэтому 20% людей творят историю побед и свершений, а 80% отговаривают их от этого.'
+            font_size: 20
+            halign: 'left'
+            padding_x: 10
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+            pos_hint: {'center_x': .5, 'center_y': .5}
+            markup: True
+<Sdevtips9Screen>
+    MDFloatLayout:
+        md_bg_color: 0, 0, 0, 0.8
+        MDIconButton:
+            icon: 'arrow-left-circle'
+            pos_hint: {'center_y': .96, 'center_x': .05}
+            theme_text_color: 'Custom'
+            text_color: [1, 1, 1, 1]
+            on_press:
+                root.manager.current = 'sdevtip'
+                root.manager.transition.direction = 'right'
+
+        MDLabel:
+            text: '[b][size=22]Секреты успешных людей[/size][/b] \n \nЖизнь и карьера многих выдающихся людей показывают, что главный ключ к успеху — это правильное распоряжение своим временем. \n \nОдержимость большой целью. У успешного человека всегда цель большая, масштабная. Это очень важный момент, потому что отсутствие масштабной цели, является показателем отсутствия жизненной стратегии. \n \nУмение во всем видеть возможности. Успешный человек мыслит категориями возможностей, а не проблем. Неудачник в возможностях ищет проблемы.'
+            font_size: 18
+            halign: 'left'
+            padding_x: 10
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+            pos_hint: {'center_x': .5, 'center_y': .5}
+            markup: True
+<Sdevtips10Screen>
+    MDFloatLayout:
+        md_bg_color: 0, 0, 0, 0.8
+        MDIconButton:
+            icon: 'arrow-left-circle'
+            pos_hint: {'center_y': .96, 'center_x': .05}
+            theme_text_color: 'Custom'
+            text_color: [1, 1, 1, 1]
+            on_press:
+                root.manager.current = 'sdevtip'
+                root.manager.transition.direction = 'right'
+
+        MDLabel:
+            text: '[b][size=21]Как правильно применять аффирмации?[/size][/b] \n \nЕсли ли вы хотите, чтобы аффирмации сработали эффективно, отслеживайте свои подводные мысленные течения и игнорируйте мысли, которые возникают фоном или как эхо в след вашей аффирмации. \n \nЗдесь главное просто повторять аффирмации и не обращать внимание на внутреннее сопротивление и непринятие, сомнение, недоверие. На первых порах это неверие в аффирмации будет и это просто нужно принять. \n \nВажно поверить в них на самом деле: Разум должен согласиться с тем, что аффирмации есть и они работают. Если есть рассогласованность разума и аффирмации — это не сработает и ожидаемый эффект не наступит.'
+            font_size: 17
+            halign: 'left'
+            padding_x: 10
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+            pos_hint: {'center_x': .5, 'center_y': .5}
+            markup: True
+<Sdevtips11Screen>
+    MDFloatLayout:
+        md_bg_color: 0, 0, 0, 0.8
+        MDIconButton:
+            icon: 'arrow-left-circle'
+            pos_hint: {'center_y': .96, 'center_x': .05}
+            theme_text_color: 'Custom'
+            text_color: [1, 1, 1, 1]
+            on_press:
+                root.manager.current = 'sdevtip'
+                root.manager.transition.direction = 'right'
+
+        MDLabel:
+            text: '[b][size=24]Как сделать много и не уставать?[/size][/b] \n \nСоставьте план дня: План будет работать только тогда, когда вы, как минимум в воображении, убедитесь, что он реалистичен. Представьте себе, момент, как вы приехали на работу, чем займетесь сначала, чем – позже, хватит ли вам времени выполнить все задуманное? Если чувствуете, что дел явно больше чем времени – пересмотрите свой график. План должен быть реалистичным. \n \nПродумайте регулярный отдых: Несколько коротких отдыхов лучше, чем один долгий. Кроме выходных, устраивайте себе маленькие отдыхи в течении дня: перерывы на обед, прогулки до метро, короткие десятиминутные перерывы каждый час в работы.'
+            font_size: 20
+            halign: 'left'
+            padding_x: 10
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+            pos_hint: {'center_x': .5, 'center_y': .5}
+            markup: True
+<Sdevtips12Screen>
+    MDFloatLayout:
+        md_bg_color: 0, 0, 0, 0.8
+        MDIconButton:
+            icon: 'arrow-left-circle'
+            pos_hint: {'center_y': .96, 'center_x': .05}
+            theme_text_color: 'Custom'
+            text_color: [1, 1, 1, 1]
+            on_press:
+                root.manager.current = 'sdevtip'
+                root.manager.transition.direction = 'right'
+
+        MDLabel:
+            text: '[b][size=24]Как правильно копить деньги?[/size][/b] \n \nДепозит: Вы кладёте деньги в банк на фиксированный период и получаете за это проценты. Обратите внимание на соотношение сроков и процентов при плавающей ставке по депозиту. Иногда бывает, что, например, на год положить деньги в банк выгоднее, чем на полгода, но менее выгодно, чем на полтора. \n \nНакопительный счёт: Вы переводите деньги на бессрочный счёт, а банк ежемесячно начисляет вам на них процент, пока вы пользуетесь его услугами. При этом ограничений на движение средств нет. Но и процент обычно невысокий.'
+            font_size: 20
+            halign: 'left'
+            padding_x: 10
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+            pos_hint: {'center_x': .5, 'center_y': .5}
+            markup: True
+<Sdevtips13Screen>
+    MDFloatLayout:
+        md_bg_color: 0, 0, 0, 0.8
+        MDIconButton:
+            icon: 'arrow-left-circle'
+            pos_hint: {'center_y': .96, 'center_x': .05}
+            theme_text_color: 'Custom'
+            text_color: [1, 1, 1, 1]
+            on_press:
+                root.manager.current = 'sdevtip'
+                root.manager.transition.direction = 'right'
+
+        MDLabel:
+            text: '[b][size=24]Как найти силы двигаться дальше?[/size][/b] \n \nЕсли все не ладится, нужно найти и поставить себе цель: Без цели и существование бесцельное, аморфное. Для начала за цель можно взять самого себя – заняться собой. Что может принести тебе самоуважение и удовлетворение? Есть много путей самосовершенствования: внешний вид, интеллект, физическая форма и т.д. \n \nМожно поставить себе цель добиваться улучшения в каком-либо одном или нескольких аспектах. Тебе лучше знать, что принесет удовлетворение. Тогда у тебя не только вкус к жизни появится, но и все остальное наладится автоматически.'
+            font_size: 20
+            halign: 'left'
+            padding_x: 10
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+            pos_hint: {'center_x': .5, 'center_y': .5}
+            markup: True
+<Sdevtips14Screen>
+    MDFloatLayout:
+        md_bg_color: 0, 0, 0, 0.8
+        MDIconButton:
+            icon: 'arrow-left-circle'
+            pos_hint: {'center_y': .96, 'center_x': .05}
+            theme_text_color: 'Custom'
+            text_color: [1, 1, 1, 1]
+            on_press:
+                root.manager.current = 'sdevtip'
+                root.manager.transition.direction = 'right'
+
+        MDLabel:
+            text: '[b][size=24]Как развить в себе харизму?[/size][/b] \n \nУчимся говорить: Уделяйте речевым упражнениям по 15 минут, но ежедневно. Начинайте с дыхательных техник, чтобы расслабить мышцы шеи и лица, продолжайте тренировку упражнениями на голос и дикцию. \n \nМировоззрение и кругозор: Расширяйте свои взгляды на мир, стремитесь к гибкому мировоззрению, откажитесь от оценивающих суждений, категоризаций, разделению окружающих явлений на «черное и белое», плохое и хорошее.'
+            font_size: 20
+            halign: 'left'
+            padding_x: 10
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+            pos_hint: {'center_x': .5, 'center_y': .5}
+            markup: True
+<Sdevtips15Screen>
+    MDFloatLayout:
+        md_bg_color: 0, 0, 0, 0.8
+        MDIconButton:
+            icon: 'arrow-left-circle'
+            pos_hint: {'center_y': .96, 'center_x': .05}
+            theme_text_color: 'Custom'
+            text_color: [1, 1, 1, 1]
+            on_press:
+                root.manager.current = 'sdevtip'
+                root.manager.transition.direction = 'right'
+
+        MDLabel:
+            text: '[b][size=24]Как начать день продуктивно?[/size][/b] \n \nФормируйте привычку начинать день с позитива: Чтобы усвоить, как начать день правильно специалисты рекомендуют встречать утро с одних и тех же действий. Это позволяет дать сигнал организму о начале нового дня и настроиться на выполнение ключевых задач. В качестве первых действий после пробуждения рекомендуют зарядку, медитацию, прогулки на свежем воздухе и чтение книг. \n \nАктивное утро, залог активного дня: Подвижные игры с питомцем, пробежка на свежем воздухе или поход на тренировку помогут активизировать работу мозга и всего организма.'
+            font_size: 20
+            halign: 'left'
+            padding_x: 10
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+            pos_hint: {'center_x': .5, 'center_y': .5}
+            markup: True
+<Sdevtips16Screen>
+    MDFloatLayout:
+        md_bg_color: 0, 0, 0, 0.8
+        MDIconButton:
+            icon: 'arrow-left-circle'
+            pos_hint: {'center_y': .96, 'center_x': .05}
+            theme_text_color: 'Custom'
+            text_color: [1, 1, 1, 1]
+            on_press:
+                root.manager.current = 'sdevtip'
+                root.manager.transition.direction = 'right'
+
+        MDLabel:
+            text: '[b][size=24]Как эффективно достигать целей?[/size][/b] \n \nНикому не рассказываем о своих целях: За исключением, может быть, людей, которым мы доверяем. Иногда советуют, наоборот, посвятить в свои планы как можно больше людей. Это будто бы должно явиться стимулом для их выполнения – кто же захочет прослыть пустозвоном! \n \nЗанимаемся визуализацией: Вкратце можно сказать, что это мысленное представление себе желанной цели так, словно мы уже ее достигли. Прежде чем практиковать визуализацию, стоит овладеть мышечной релаксацией.'
+            font_size: 20
+            halign: 'left'
+            padding_x: 10
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+            pos_hint: {'center_x': .5, 'center_y': .5}
+            markup: True
+<Sdevtips17Screen>
+    MDFloatLayout:
+        md_bg_color: 0, 0, 0, 0.8
+        MDIconButton:
+            icon: 'arrow-left-circle'
+            pos_hint: {'center_y': .96, 'center_x': .05}
+            theme_text_color: 'Custom'
+            text_color: [1, 1, 1, 1]
+            on_press:
+                root.manager.current = 'sdevtip'
+                root.manager.transition.direction = 'right'
+
+        MDLabel:
+            text: '[b][size=24]Как развить дисциплину в себе?[/size][/b] \n \nТеория маленьких шагов: Всё большое состоит из малого. Сложные вещи нельзя сделать наскоком. Мозг противится резким изменениям. Если же двигаться постепенно, вы обнаружите, что все вокруг меняется. Если делать 10 отжиманий каждый день в течение года и прибавлять каждый месяц по 5 или 10, то к концу года вы сможете отжиматься 100 раз. \n \nВсё должно быть на своих местах: Железное правило — кладите каждую вещь на то место, откуда вы взяли. Документы, договора, спортивные принадлежности. Кладя вещь на свое место, вы автоматически выработаете привычку брать/класть вещи, что облегчит вам сборы и сэкономит силы.'
+            font_size: 20
+            halign: 'left'
+            padding_x: 10
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+            pos_hint: {'center_x': .5, 'center_y': .5}
+            markup: True
+<Sdevtips18Screen>
+    MDFloatLayout:
+        md_bg_color: 0, 0, 0, 0.8
+        MDIconButton:
+            icon: 'arrow-left-circle'
+            pos_hint: {'center_y': .96, 'center_x': .05}
+            theme_text_color: 'Custom'
+            text_color: [1, 1, 1, 1]
+            on_press:
+                root.manager.current = 'sdevtip'
+                root.manager.transition.direction = 'right'
+
+        MDLabel:
+            text: '[b][size=24]Раскройте свой потенциал[/size][/b] \n \nВыбери сферу, в которой тебе хочется попробовать реализоваться. \n \nУделяй выбранной сфере как можно больше времени. \n \nПробуй все возможное, чтобы проявить себя \n \nЗадание: определиться сегодня с одной сферой, в которой вы начнёте двигаться вперед.'
+            font_size: 20
+            halign: 'left'
+            padding_x: 10
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+            pos_hint: {'center_x': .5, 'center_y': .5}
+            markup: True
+<Sdevtips19Screen>
+    MDFloatLayout:
+        md_bg_color: 0, 0, 0, 0.8
+        MDIconButton:
+            icon: 'arrow-left-circle'
+            pos_hint: {'center_y': .96, 'center_x': .05}
+            theme_text_color: 'Custom'
+            text_color: [1, 1, 1, 1]
+            on_press:
+                root.manager.current = 'sdevtip'
+                root.manager.transition.direction = 'right'
+
+        MDLabel:
+            text: '[b][size=24]Как снова обрести мотивацию?[/size][/b] \n \nНапомните себе, почему вы так хотите это сделать: Иногда нам нужен небольшой толчок, который поможет нам продолжить работу над проектом или заданием. Произнесите вслух (или запишите) причину, по которой вам необходимо это сделать. Подумайте о преимуществах, которые вы получите, как только цель будет достигнута. \n \nПопробуйте сделать свои задачи более веселыми и интересными: Если вы боитесь приступить к работе, будет очень сложно заставить себя начать. В таком случае попробуйте найти способ сделать эту работу более увлекательной для себя. Можно задействовать в этом других людей или бросить себе вызов каким-то новым способом.'
+            font_size: 20
+            halign: 'left'
+            padding_x: 10
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+            pos_hint: {'center_x': .5, 'center_y': .5}
+            markup: True
+<Sdevtips20Screen>

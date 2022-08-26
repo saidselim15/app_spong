@@ -1,0 +1,100 @@
+<MenuScreen>
+    MDFloatLayout:
+        md_bg_color: 0, 0, 0, 0.8
+
+        FitImage:
+            source: 'spong.png'
+            size_hint: .4, .4
+            pos_hint: {'center_y': .8, 'center_x': .5}
+
+
+        MDRoundFlatIconButton:
+            text: 'Книги'
+            icon: "book-open-variant"
+            text_color: 0, .6, 1, 1
+            line_color: 0, .6, 1, 1
+            font_size: 20
+            pos_hint: {'center_y': .5, 'center_x': .5}
+            size_hint: .8, .082
+            bold: True
+            on_press:
+                root.manager.current = 'book'
+                root.manager.transition.direction = 'left'
+
+        MDRoundFlatIconButton:
+            icon: 'notebook-edit-outline'
+            text: 'Советы'
+            text_color: 0, .6, 1, 1
+            line_color: 0, .6, 1, 1
+            font_size: 20
+            pos_hint: {'center_y': .40, 'center_x': .5}
+            size_hint: .8, .082
+            bold: True
+            on_press:
+                root.manager.current = 'tips'
+                root.manager.transition.direction = 'left'
+        MDRoundFlatIconButton:
+            icon: 'alpha-s-box'
+            text: 'О проекте'
+            text_color: 0, .6, 1, 1
+            line_color: 0, .6, 1, 1
+            font_size: 20
+            pos_hint: {'center_y': .305, 'center_x': .5}
+            size_hint: .8, .082
+            bold: True
+            on_press:
+                root.manager.current = 'spong'
+                root.manager.transition.direction = 'left'
+
+
+<SpongScreen>
+    MDFloatLayout:
+        md_bg_color: 0, 0, 0, 0.8
+        MDToolbar:
+            pos_hint: {'center_y': .96}
+            size_hint_y: .121
+
+        MDIconButton:
+            icon: 'arrow-left-circle'
+            pos_hint: {'center_y': .96, 'center_x': .05}
+            theme_text_color: 'Custom'
+            text_color: [1, 1, 1, 1]
+            on_press:
+                root.manager.current = 'menu'
+                root.manager.transition.direction = 'right'
+
+        MDLabel:
+            text: 'О проекте Spong'
+            font_size: 30
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+            pos_hint: {'center_y': .96, 'center_x': .5}
+            bold: True
+            halign: 'center'
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+
+        MDLabel:
+            text: 'Spong - это приложение в котором вы сможете узнать полезные факты с книг. Данное приложение не представляет в себе книг. А только полезные факты из книг.\n \nТак как это наше первое приложение мы хотим чтобы оно было максимально полезным для вас и поэтому подготовили для вас ряд бонусов.\n \nБлагодарим вас за то что вы выбрали Spong.'
+            font_size: 18
+            halign: 'left'
+            pos_hint: {'center_x': .5, 'center_y': .5}
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+            padding_x: 10
+
+
+        MDFillRoundFlatButton:
+            text: 'Ваши Бонусы'
+            text_color: 1, 1, 1, 1
+            line_color: 0, .6, 1, 1
+            md_bg_color: 0, .6, 1, 1
+            font_size: 20
+            pos_hint: {'center_y': .2, 'center_x': .5}
+            size_hint: .9, .082
+            bold: True
+            on_release:
+
+                import webbrowser
+                webbrowser.open('https://t.me/+JyYBSLkuXapjMDMy')
+
